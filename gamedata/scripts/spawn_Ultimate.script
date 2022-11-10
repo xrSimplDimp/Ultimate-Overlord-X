@@ -1,0 +1,814 @@
+function main()
+
+local respawn= 1
+if math.random()<respawn then
+
+spawn_NPC()
+spawn_monster()
+spawn_anom()
+spawn_garbage()
+spawn_agroprom()
+
+end
+
+end
+
+function spawn_NPC()
+
+-- escape
+
+  local spawn_point1 = vector():set( -206.41, -20.55, -146.04)
+  local obj = alife():create("novice_stalker_6",spawn_point1,46565,61)
+  local obj = alife():create("novice_stalker_2",spawn_point1,46565,61)
+  local obj = alife():create("novice_stalker_3",spawn_point1,46565,61)
+  local obj = alife():create("novice_stalker_4",spawn_point1,46565,61)
+  local obj = alife():create("novice_stalker_5",spawn_point1,46565,61)
+  
+  local spawn_point1 = vector():set( 7.45, 0.34, 273.39)
+  local obj = alife():create("dark_stalker_1",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_1",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_2",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_2",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_3",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_3",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_4",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_4",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_5",spawn_point1,284819,181)
+  local obj = alife():create("dark_stalker_5",spawn_point1,284819,181)
+  
+  local spawn_point1 = vector():set( -182.108, -31.16, -331.85)
+  local obj = alife():create("clear_sky_1",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_1",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_1",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_1",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_1",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_1",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_4",spawn_point1,68616,36)
+  local obj = alife():create("clear_sky_4",spawn_point1,68616,36)
+
+  local spawn_point1 = vector():set( -157.54, -31.47, -263.88)
+  local obj = alife():create("dark_stalker_1",spawn_point1,92009,35)
+  local obj = alife():create("dark_stalker_2",spawn_point1,92009,35)
+  local obj = alife():create("dark_stalker_3",spawn_point1,92009,35)
+  local obj = alife():create("dark_stalker_4",spawn_point1,92009,35)
+  local obj = alife():create("dark_stalker_5",spawn_point1,92009,35)
+
+
+  local spawn_point1 = vector():set( 207.76, 3.14, 310.77)
+  local obj = alife():create("ultimate_2",spawn_point1,284819,181)
+  
+  local spawn_point1 = vector():set( 114.35, -7.59, -16.79)
+  local obj = alife():create("master_bandit_1",spawn_point1,416351,115)
+  local obj = alife():create("master_bandit_2",spawn_point1,416351,115)
+  
+  local spawn_point1 = vector():set( 24.48, 1.12, 26.41)
+  local obj = alife():create("experienced_stalker_1",spawn_point1,303453,90)
+  local obj = alife():create("experienced_stalker_2",spawn_point1,303453,90)
+  local obj = alife():create("experienced_stalker_1",spawn_point1,303453,90)
+  local obj = alife():create("novice_stalker_9",spawn_point1,303453,90)
+  local obj = alife():create("novice_stalker_10",spawn_point1,303453,90)
+  local obj = alife():create("novice_stalker_11",spawn_point1,303453,90)
+
+  local spawn_point1 = vector():set( -8.27, 2.57, 85.80)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  local obj = alife():create("esc_soldier_respawn_specnaz",spawn_point1,28485,48)
+  
+  local spawn_point1 = vector():set( 15.81, 15.92, 667.08)
+  local obj = alife():create("veteran_bandit_1",spawn_point1,294298,206)
+  local obj = alife():create("veteran_bandit_2",spawn_point1,294298,206)
+  local obj = alife():create("experienced_bandit_3",spawn_point1,294298,206)
+  local obj = alife():create("experienced_bandit_3",spawn_point1,294298,206)
+  local obj = alife():create("experienced_bandit_3",spawn_point1,294298,206)
+  local obj = alife():create("experienced_bandit_3",spawn_point1,294298,206)
+  local obj = alife():create("experienced_bandit_3",spawn_point1,294298,206)
+  local obj = alife():create("experienced_bandit_3",spawn_point1,294298,206)
+  
+  local spawn_point1 = vector():set(312.27, 3.30, 123.86)
+  local obj = alife():create("veteran_stalker_2",spawn_point1,571306,143)
+  local obj = alife():create("veteran_stalker_2",spawn_point1,571306,143)
+  local obj = alife():create("veteran_stalker_3",spawn_point1,571306,143)
+  local obj = alife():create("experienced_stalker_2",spawn_point1,571306,143)
+end
+
+function spawn_garbage()
+if level == "l02_garbage" then
+elseif xr_logic.pstor_retrieve(db.actor, "garbage_npc", 0)==0 then
+
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 42.25, 0.47, -287.74),215420,354 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 42.25, 0.47, -287.74),215420,354 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 42.25, 0.47, -287.74),215420,354 )
+obj = alife():create( "novice_bandit_1", 
+vector():set( 42.25, 0.47, -287.74),215420,354 )
+obj = alife():create( "novice_bandit_2", 
+vector():set( 42.25, 0.47, -287.74),215420,354 )
+
+obj = alife():create( "experienced_bandit_3", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "master_bandit_1", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "master_bandit_1", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "veteran_bandit_1", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "veteran_bandit_1", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "veteran_bandit_2", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "veteran_bandit_2", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+obj = alife():create( "veteran_bandit_2", 
+vector():set( -183.76, -4.935, -165.52),40214,280 )
+
+obj = alife():create( "master_stalker_1", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "veteran_stalker_2", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "veteran_stalker_3", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "experienced_stalker_1", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "experienced_stalker_2", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "novice_stalker_1", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "novice_stalker_2", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "novice_stalker_3", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "novice_stalker_4", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+obj = alife():create( "novice_stalker_5", 
+vector():set( -53.277, -2.36, -213.01),140008,328 )
+
+obj = alife():create( "novice_bandit_1", 
+vector():set( 70.513, 0.31, -147.32),241000,359 )
+obj = alife():create( "novice_bandit_2", 
+vector():set( 70.513, 0.31, -147.32),241000,359 )
+obj = alife():create( "novice_bandit_3", 
+vector():set( 70.513, 0.31, -147.32),241000,359 )
+obj = alife():create( "novice_bandit_4", 
+vector():set( 70.513, 0.31, -147.32),241000,359 )
+obj = alife():create( "experienced_bandit_1", 
+vector():set( 70.513, 0.31, -147.32),241000,359 )
+
+obj = alife():create( "dark_stalker_1", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+obj = alife():create( "dark_stalker_2", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+obj = alife():create( "dark_stalker_3", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+obj = alife():create( "dark_stalker_4", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+obj = alife():create( "dark_stalker_5", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+obj = alife():create( "dark_stalker_6", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+obj = alife():create( "ultimate_1", 
+vector():set( 106.65, 0.91, -63.94),271244,377 )
+
+obj = alife():create( "experienced_bandit_1", 
+vector():set( 15.909, 0.40, -13.73),189036,344 )
+obj = alife():create( "experienced_bandit_1", 
+vector():set( 15.909, 0.40, -13.73),189036,344 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 15.909, 0.40, -13.73),189036,344 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 15.909, 0.40, -13.73),189036,344 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 15.909, 0.40, -13.73),189036,344 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 15.909, 0.40, -13.73),189036,344 )
+
+obj = alife():create( "dark_stalker_1", 
+vector():set( -62.32, 0.81, 9.88),135118,323 )
+obj = alife():create( "dark_stalker_1", 
+vector():set( -62.32, 0.81, 9.88),135118,323 )
+obj = alife():create( "dark_stalker_2", 
+vector():set( -62.32, 0.81, 9.88),135118,323 )
+obj = alife():create( "dark_stalker_2", 
+vector():set( -62.32, 0.81, 9.88),135118,323 )
+obj = alife():create( "dark_stalker_3", 
+vector():set( -62.32, 0.81, 9.88),135118,323 )
+
+obj = alife():create( "novice_bandit_1", 
+vector():set( -102.91, 0.34, 9.92),110336,309 )
+obj = alife():create( "novice_bandit_2", 
+vector():set( -102.91, 0.34, 9.92),110336,309 )
+obj = alife():create( "novice_bandit_3", 
+vector():set( -102.91, 0.34, 9.92),110336,309 )
+obj = alife():create( "novice_bandit_4", 
+vector():set( -102.91, 0.34, 9.92),110336,309 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( -102.91, 0.34, 9.92),110336,309 )
+
+obj = alife():create( "dark_stalker_1", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "dark_stalker_2", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "dark_stalker_3", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "dark_stalker_4", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "dark_stalker_5", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "veteran_bandit_1", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "veteran_bandit_2", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( -174.66, -0.302, -8.147),47490,278 )
+
+obj = alife():create( "pri_respawn_dolg", 
+vector():set( 38.307, 0.47, 221.30),212698,355 )
+obj = alife():create( "pri_respawn_dolg", 
+vector():set( 38.307, 0.47, 221.30),212698,355 )
+obj = alife():create( "pri_respawn_dolg", 
+vector():set( 38.307, 0.47, 221.30),212698,355 )
+obj = alife():create( "pri_respawn_dolg", 
+vector():set( 38.307, 0.47, 221.30),212698,355 )
+obj = alife():create( "pri_respawn_dolg", 
+vector():set( 38.307, 0.47, 221.30),212698,355 )
+
+obj = alife():create( "experienced_bandit_1", 
+vector():set( 84.33, 0.124, 142.50),252611,366 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 84.33, 0.124, 142.50),252611,366 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 84.33, 0.124, 142.50),252611,366 )
+
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 283.99, 1.29, 150.01),380640,413 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 283.99, 1.29, 150.01),380640,413 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 283.99, 1.29, 150.01),380640,413 )
+obj = alife():create( "experienced_bandit_2", 
+vector():set( 283.99, 1.29, 150.01),380640,413 )
+obj = alife():create( "experienced_bandit_3", 
+vector():set( 283.99, 1.29, 150.01),380640,413 )
+
+obj = alife():create( "zombie_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "zombie_bio_4", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "izlom_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "izlom_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "izlom_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "snork_bio_1", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+obj = alife():create( "snork_bio_2", 
+vector():set( 240.39, -2.29, -26.94),363730,407 )
+
+obj = alife():create( "zombie_bio_1", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_4", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_5", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_6", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_7", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_8", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_9", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+obj = alife():create( "zombie_bio_10", 
+vector():set( 131.97, 1.43, -23.15),292103,374 )
+
+obj = alife():create( "boar_bio_1", 
+vector():set( 47.27, 0.47, -107.06),220807,356 )
+obj = alife():create( "boar_bio_2", 
+vector():set( 47.27, 0.47, -107.06),220807,356 )
+obj = alife():create( "chimera_bio_1", 
+vector():set( 47.27, 0.47, -107.06),220807,356 )
+
+obj = alife():create( "zombie_bio_1", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "zombie_bio_4", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "zombie_bio_5", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "bloodsucker_bio_4", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "dog_bio_3", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "dog_bio_3", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "dog_bio_3", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+obj = alife():create( "cat_bio_1", 
+vector():set( 66.96, -3.47, -247.10),237799,358 )
+
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_1", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+obj = alife():create( "tushkano_bio_2", 
+vector():set( -25.790, 20.117, -297.02),164750,342 )
+
+obj = alife():create( "burer_bio_1", 
+vector():set( -44.76, 3.16, -253.25),144698,332 )
+
+xr_logic.pstor_store(db.actor, "garbage_npc", 1)
+end
+
+end
+
+function spawn_agroprom()
+if level == "l02_agroprom" then
+elseif xr_logic.pstor_retrieve(db.actor, "agroprom_npc", 0)==0 then
+
+obj = alife():create( "clear_sky_1", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_1", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_2", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_2", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_3", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_3", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_4", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_4", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_4", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+obj = alife():create( "clear_sky_1", 
+vector():set( 69.764, -0.20, 33.641),305870,423 )
+
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 4.896, -0.299, 34.256),245286,477 )
+
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 90.803, 0.402, -77.79),325666,426 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 90.803, 0.402, -77.79),325666,426 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 90.803, 0.402, -77.79),325666,426 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 90.803, 0.402, -77.79),325666,426 )
+obj = alife():create( "esc_soldier_respawn_specnaz", 
+vector():set( 90.803, 0.402, -77.79),325666,426 )
+
+obj = alife():create( "clear_sky_1", 
+vector():set( 47.437, 0.49, -51.660),284755,425 )
+obj = alife():create( "clear_sky_1", 
+vector():set( 47.437, 0.49, -51.660),284755,425 )
+obj = alife():create( "clear_sky_1", 
+vector():set( 47.437, 0.49, -51.660),284755,425 )
+obj = alife():create( "clear_sky_1", 
+vector():set( 47.437, 0.49, -51.660),284755,425 )
+obj = alife():create( "clear_sky_4", 
+vector():set( 47.437, 0.49, -51.660),284755,425 )
+
+xr_logic.pstor_store(db.actor, "agroprom_npcc", 1)
+end
+
+end
+
+function spawn_anom()
+  local spawn_point1 = vector():set( -56.185, -3.98, -65.67)
+  local obj = alife():create("zone_radioactive_no_strong",spawn_point1,222508,74)
+  local spawn_point1 = vector():set( -44.34, -3.42, -53.19)
+  local obj = alife():create("zone_radioactive_no_strong",spawn_point1,234937,74)
+  local spawn_point1 = vector():set( 24.07, 13.86, 144.77)
+  local obj = alife():create("zone_radioactive_no_strong",spawn_point1,302800,94)
+  local spawn_point1 = vector():set( 90.25, 20.01, 155.13)
+  local obj = alife():create("zone_radioactive_no_strong",spawn_point1,387403,96)
+
+end
+
+
+function spawn_monster()
+	if level == "l01_escape" then
+elseif xr_logic.pstor_retrieve(db.actor, "escape_monster", 0)==0 then
+
+obj = alife():create( "zombie_bio_1", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_1", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_1", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 86.88, -0.04, 492.63), 28485, 48 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 86.88, -0.04, 492.63), 28485, 48 )
+obj = alife():create( "zombie_bio_2", 
+vector():set( 86.88, -0.04, 492.63), 28485, 48 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 76.26, -0.76, 482.11), 28485, 48 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 76.26, -0.76, 482.11), 28485, 48 )
+obj = alife():create( "zombie_bio_3", 
+vector():set( 76.26, -0.76, 482.11), 28485, 48 )
+obj = alife():create( "zombie_bio_4", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_4", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_4", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_5", 
+vector():set( 72.76, -0.14, 466.69), 28485, 48 )
+obj = alife():create( "zombie_bio_5", 
+vector():set( 72.76, -0.14, 466.69), 28485, 48 )
+obj = alife():create( "zombie_bio_5", 
+vector():set( 72.76, -0.14, 466.69), 28485, 48 )
+obj = alife():create( "zombie_bio_6", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_6", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_6", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_7", 
+vector():set( 86.19, 0.45, 463.26), 28485, 48 )
+obj = alife():create( "zombie_bio_7", 
+vector():set( 86.19, 0.45, 463.26), 28485, 48 )
+obj = alife():create( "zombie_bio_7", 
+vector():set( 86.19, 0.45, 463.26), 28485, 48 )
+obj = alife():create( "zombie_bio_8", 
+vector():set( 67.53, -1.49, 501.53), 28485, 48 )
+obj = alife():create( "zombie_bio_8", 
+vector():set( 67.53, -1.49, 501.53), 28485, 48 )
+obj = alife():create( "zombie_bio_8", 
+vector():set( 67.53, -1.49, 501.53), 28485, 48 )
+obj = alife():create( "zombie_bio_9", 
+vector():set( 73.33, -1.49, 502.13), 28485, 48 )
+obj = alife():create( "zombie_bio_9", 
+vector():set( 73.33, -1.49, 502.13), 28485, 48 )
+obj = alife():create( "zombie_bio_9", 
+vector():set( 73.33, -1.49, 502.13), 28485, 48 )
+obj = alife():create( "zombie_bio_10", 
+vector():set( 92.83, 1.01, 516.83), 28485, 48 )
+obj = alife():create( "zombie_bio_10", 
+vector():set( 92.83, 1.01, 516.83), 28485, 48 )
+obj = alife():create( "zombie_bio_10", 
+vector():set( 92.83, 1.01, 516.83), 28485, 48 )
+obj = alife():create( "zombie_bio_11", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_11", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_11", 
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "zombie_bio_12", 
+vector():set( 123.33, 2.21, 509.23), 28485, 48 )
+obj = alife():create( "zombie_bio_12", 
+vector():set( 123.33, 2.21, 509.23), 28485, 48 )
+obj = alife():create( "zombie_bio_12", 
+vector():set( 123.33, 2.21, 509.23), 28485, 48 )
+obj = alife():create( "zombie_bio_13", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_13", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_13", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_14", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_14", 
+vector():set( 66.13, -1.49, 518.63), 28485, 48 )
+obj = alife():create( "zombie_bio_14", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_15", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_15", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_15", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_16", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_16", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_17", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_17", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_17", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_18", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "zombie_bio_18", 
+vector():set( 124.33, 2.21, 491.93), 28485, 48 )
+obj = alife():create( "pseudodog_bio_1",
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "pseudodog_bio_2",
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "pseudodog_bio_2",
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "pseudodog_bio_1",
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "pseudodog_bio_2",
+vector():set( 61.79, 1.75, 471.06), 28485, 48 )
+obj = alife():create( "dog_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_3",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_3",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_3",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_2",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "dog_bio_2",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_1",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_2",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_2",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_2",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_3",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_3",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "cat_bio_3",
+vector():set( 74.82, 4.82, 582.84), 28485, 48 )
+obj = alife():create( "flesh_bio_1",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_1",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_1",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_1",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_1",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_2",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_2",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_2",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_3",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_3",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "flesh_bio_3",
+vector():set( 100.26, 1.61, 527.03), 28485, 48 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_1",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "tushkano_bio_2",
+vector():set( 142.58, 0.22, 340.50), 448584, 232 )
+obj = alife():create( "controller_bio_1",
+vector():set( 34.89, 3.36, 594.05), 309690, 204 )
+obj = alife():create( "controller_bio_2",
+vector():set( 34.89, 3.36, 594.05), 309690, 204 )
+obj = alife():create( "controller_bio_1",
+vector():set( 34.89, 3.36, 594.05), 309690, 204 )
+obj = alife():create( "controller_bio_2",
+vector():set( 34.89, 3.36, 594.05), 309690, 204 )
+obj = alife():create( "controller_bio_1",
+vector():set( 34.89, 3.36, 594.05), 309690, 204 )
+obj = alife():create( "gigant_bio_1",
+vector():set( 334.57, 15.50, -21.89), 584096, 2 )
+obj = alife():create( "gigant_bio_1",
+vector():set( 334.57, 15.50, -21.89), 584096, 2 )
+obj = alife():create( "gigant_bio_1",
+vector():set( 334.57, 15.50, -21.89), 584096, 2 )
+obj = alife():create( "izlom_bio_1",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_2",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_2",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_3",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_3",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_3",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_1",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_1",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_1",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_2",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_2",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_3",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_3",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_3",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_1",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "izlom_bio_1",
+vector():set( -76.88, -11.98, -173.85), 192602, 106 )
+obj = alife():create( "bloodsucker_bio_4", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "bloodsucker_bio_4", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "bloodsucker_bio_4", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "bloodsucker_bio_4", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "snork_bio_1", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "snork_bio_2", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "snork_bio_1", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "snork_bio_2", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "snork_bio_1", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+obj = alife():create( "snork_bio_2", 
+vector():set( 175.01, 7.13, 109.60), 477358, 157 )
+
+xr_logic.pstor_store(db.actor, "escape_monster", 1)
+end
+
+end

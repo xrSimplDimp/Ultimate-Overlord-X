@@ -1,0 +1,160 @@
+
+-- инициализаци€
+class "cheat" (CUIScriptWnd)
+
+function cheat:__init(owner) super()
+	self.owner = owner
+	self:InitControls()
+	self:InitCallBacks()
+end
+
+function cheat:__finalize() end
+
+function cheat:InitControls()
+	-- здесь определ€ем координаты левого верхнего угла и ширину-высоту
+	self:Init(50,50,550,450)
+
+	-- файл-описатель наших элементов
+	local xml = CScriptXmlInit()
+	xml:ParseFile("ui_cheat_player.xml")
+
+	-- рамка
+	xml:InitStatic("background", self)
+
+	-- кнопки
+	self:Register(xml:Init3tButton("caption", self),"caption")
+	self:Register(xml:Init3tButton("btn_1", self),"btn_1")
+	self:Register(xml:Init3tButton("btn_2", self),"btn_2")
+	self:Register(xml:Init3tButton("btn_3", self),"btn_3")
+	self:Register(xml:Init3tButton("btn_4", self),"btn_4")
+	self:Register(xml:Init3tButton("btn_5", self),"btn_5")
+	self:Register(xml:Init3tButton("btn_6", self),"btn_6")
+	self:Register(xml:Init3tButton("btn_7", self),"btn_7")
+	self:Register(xml:Init3tButton("btn_8", self),"btn_8")
+	self:Register(xml:Init3tButton("btn_9", self),"btn_9")
+	self:Register(xml:Init3tButton("btn_stop", self),"btn_stop")
+	-- кнопка выхода
+	self:Register(xml:Init3tButton("btn_quit", self),"btn_quit")
+end
+
+function cheat:InitCallBacks()
+	-- тут интерактивные элементы, при определенном действии выполн€етс€ заданна€ ф-и€
+	self:AddCallback("btn_1", ui_events.BUTTON_CLICKED, self.cheat1, self)
+	self:AddCallback("btn_2", ui_events.BUTTON_CLICKED, self.cheat2, self)
+	self:AddCallback("btn_3", ui_events.BUTTON_CLICKED, self.cheat3, self)
+	self:AddCallback("btn_4", ui_events.BUTTON_CLICKED, self.cheat4, self)
+	self:AddCallback("btn_5", ui_events.BUTTON_CLICKED, self.cheat5, self)
+	self:AddCallback("btn_6", ui_events.BUTTON_CLICKED, self.cheat6, self)
+	self:AddCallback("btn_7", ui_events.BUTTON_CLICKED, self.cheat7, self)
+	self:AddCallback("btn_8", ui_events.BUTTON_CLICKED, self.cheat8, self)
+	self:AddCallback("btn_9", ui_events.BUTTON_CLICKED, self.cheat9, self)
+	self:AddCallback("btn_stop", ui_events.BUTTON_CLICKED, self.btn_stop, self)
+	self:AddCallback("btn_quit", ui_events.BUTTON_CLICKED, self.on_quit, self)
+end
+
+function cheat:on_quit()
+ self:GetHolder():start_stop_menu (self,true)
+end
+
+function cheat:OnKeyboard(dik, keyboard_action)
+	CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+-- на выход повесим Esc
+		if dik == DIK_keys.DIK_ESCAPE then
+			self:on_quit()
+		end
+		if dik == DIK_keys.DIK_NUMPAD1 then
+			self:cheat1()
+		end
+		if dik == DIK_keys.DIK_NUMPAD2 then
+			self:cheat2()
+		end
+		if dik == DIK_keys.DIK_NUMPAD3 then
+			self:cheat3()
+		end
+		if dik == DIK_keys.DIK_NUMPAD4 then
+			self:cheat4()
+		end
+		if dik == DIK_keys.DIK_NUMPAD5 then
+			self:cheat5()
+		end
+		if dik == DIK_keys.DIK_NUMPAD6 then
+			self:cheat6()
+		end
+		if dik == DIK_keys.DIK_NUMPAD7 then
+			self:cheat7()
+		end
+		if dik == DIK_keys.DIK_NUMPAD8 then
+			self:cheat8()
+		end
+		if dik == DIK_keys.DIK_NUMPAD9 then
+			self:cheat9()
+		end
+		if dik == DIK_keys.DIK_NUMPAD0 then
+			self:btn_stop()
+		end
+	end
+	return true
+end
+
+function cheat:cheat1()
+		soundtrack.play()
+		self:on_quit()
+end
+
+function cheat:cheat2()
+		soundtrack.play2()
+		self:on_quit()
+end
+
+function cheat:cheat3()
+		soundtrack.play3()
+		self:on_quit()
+end
+
+function cheat:cheat4()
+		soundtrack.play4()
+		self:on_quit()
+end
+
+function cheat:btn_stop()
+		soundtrack.s_stop()
+end
+
+function cheat:cheat6()
+		soundtrack.play4()
+		self:on_quit()
+end
+
+function cheat:cheat5()
+		soundtrack.play6()
+		self:on_quit()
+end
+
+function cheat:cheat7()
+		soundtrack.play7()
+		self:on_quit()
+end
+
+function cheat:cheat8()
+		soundtrack.play8()
+		self:on_quit()
+end
+
+function cheat:cheat9()
+		soundtrack.play9()
+		self:on_quit()
+end
+function cheat:check_game()
+	-- возвращает true если запущена игра
+	local check = false
+	if level.present() and (db.actor ~= nil) and db.actor:alive() then
+		check = true
+	end
+	return check
+end
+
+function cheat:on_quit()
+	self:GetHolder():start_stop_menu (self,true)
+end
+

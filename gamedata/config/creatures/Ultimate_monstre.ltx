@@ -1,0 +1,364 @@
+;-------------------------------------------------------
+;- повелитель зоны v0.5
+;-------------------------------------------------------
+
+[zombie_bio_1]:zombie_weak
+visual					= monsters\zombi\zombi_1
+icon					= ui_npc_monster_zombie
+species					= zombie
+Spawn_Inventory_Item_Section 		= mutant_zombie_hand
+Spawn_Inventory_Item_Probability 	= 3.0
+immunities_sect				= zombie_immunities_bio_1
+attack_params				= zombie_attack_params_bio_1
+
+hit_type 	=	radiation
+
+;------------------------------------------------------------------------- 
+; Psy Aura
+;-------------------------------------------------------------------------
+PsyAura_HeadSound			= monsters\controller\controller_control1
+PsyAura_SoundLeftPath		= monsters\controller\controller_presence_l
+PsyAura_SoundRightPath		= monsters\controller\controller_presence_r
+PsyAura_Radius				= 20	;30
+PsyAura_Damage				= 0.05
+
+aura_effector				= controller_aura_pp_effector_section
+aura_effector_hit			= controller_aura_pp_hit_effector_section
+
+PsyAura_Fake_Duration		= 3000
+PsyAura_Fake_Delay			= 8000
+PsyAura_Fake_MaxAddDist		= 90
+PsyAura_Fake_MinAddDist		= 20
+PsyAura_HitDelay			= 1500
+PsyAura_PPHitDelay			= 300
+
+
+;------------------------------------------------------------------------- 
+
+[zombie_attack_params_bio_1]
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;right hand strike
+stand_attack_0 =	  	0.30,		0.15,		    100,        0.0, 1.0, 0.0,		 -0.3, 1.0, -0.6, 0.6,							  2.0
+;left hand strike
+stand_attack_1 =	  	0.35,		0.15,		    100,        0.0, 1.0, 0.0,		 -1.8, 0.6, -0.6, 0.6,							  2.0
+;left hand strike2
+stand_attack_2 =	  	0.30,		0.15,		    120,        0.0, 1.0, 0.0,		 -0.6, 0.6, -1.0, 1.0,							  2.0
+;left hand strike3
+stand_attack_3 =	  	0.30,		0.15,		    180,        0.0, 1.0, 0.0,		 -1.0, 0.3, -0.6, 0.6,							  2.0
+
+[zombie_immunities_bio_1]
+burn_immunity			= 1.0
+strike_immunity			= 1.0
+shock_immunity			= 1.0
+wound_immunity			= 0.20
+radiation_immunity		= 0.0
+telepatic_immunity		= 1.0
+chemical_burn_immunity		= 1.0
+explosion_immunity		= 0.70
+fire_wound_immunity		= 0.70
+
+[zombie_bio_2]:zombie_bio_1
+visual				= monsters\zombi\zombi_2
+
+[zombie_bio_3]:zombie_bio_1
+visual				= monsters\zombi\zombi_3
+
+[zombie_bio_4]:zombie_bio_1
+visual				= monsters\zombi\zombi_4
+
+[zombie_bio_5]:zombie_bio_1
+visual				= monsters\zombi\zombi_5
+
+[zombie_bio_6]:zombie_bio_1
+visual				= monsters\zombi\zombi_6
+
+[zombie_bio_7]:zombie_bio_1
+visual				= monsters\zombi\zombi_7
+
+[zombie_bio_8]:zombie_bio_1
+visual				= monsters\zombi\zombi_8
+
+[zombie_bio_9]:zombie_bio_1
+visual				= monsters\zombi\zombi_9
+
+[zombie_bio_10]:zombie_bio_1
+visual				= monsters\zombi\zombi_10
+
+[zombie_bio_11]:zombie_bio_1
+visual				= monsters\zombi\zombi_11
+
+[zombie_bio_12]:zombie_bio_1
+visual				= monsters\zombi\zombi_12
+
+[zombie_bio_13]:zombie_bio_1
+visual				= monsters\zombi\zombi_trup
+
+[zombie_bio_14]:zombie_bio_1
+visual				= monsters\zombi\zombi_trup_2
+
+[zombie_bio_15]:zombie_bio_1
+visual				= monsters\zombi\zombi_trup_3
+
+[zombie_bio_16]:zombie_bio_1
+visual				= monsters\zombi\zombi_13
+
+[zombie_bio_17]:zombie_bio_1
+visual				= monsters\zombi\zombi_14
+
+[zombie_bio_18]:zombie_bio_1
+visual				= monsters\zombi\zombi_15
+
+[cat_bio_1]:m_cat_e
+visual				= monsters\cat\cat
+
+[cat_bio_2]:cat_bio_1
+visual				= monsters\cat\cat_1
+
+[cat_bio_3]:cat_bio_1
+visual				= monsters\cat\cat_2
+
+[burer_bio_1]:m_burer_normal
+visual				= monsters\burer\burer
+
+[chimera_bio_1]:chimera_strong
+visual				= monsters\el_chimera\el_chimera
+
+immunities_sect			= burer_bio_1_immunities
+
+[burer_bio_1_immunities]
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.0
+wound_immunity			= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity		= 0.0
+explosion_immunity		= 0.5
+fire_wound_immunity		= 0.5
+
+[burer_bio_2]:burer_bio_1
+visual				= monsters\burer\burer_1
+
+[burer_bio_3]:burer_bio_1
+visual				= monsters\burer\burer_2
+
+[izlom_bio_1]:m_fracture_e
+visual				 = monsters\izlom\izlom
+
+[izlom_bio_2]:m_fracture_e
+visual				 = monsters\izlom\izlom_1
+
+[izlom_bio_3]:m_fracture_e
+visual				 = monsters\izlom\izlom_2
+
+[poltergeist_tele_bio_1]:m_poltergeist_normal_tele
+
+[poltergeist_flame_bio_2]:m_poltergeist_strong_flame
+
+[bloodsucker_bio_1]:bloodsucker_strong
+visual				= monsters\krovosos\krovosos_1
+Predator_Visual			= monsters\krovosos\krovosos_color_krasn
+Health			   		 = 900
+immunities_sect				 = bloodsucker_bio_1_immunities
+attack_params				 = bloodsucker_bio_1_attack_params
+MinSpeed		    		 = 9.0	;10.0					
+MaxSpeed		    		 = 9.0	;10.0					
+going_speed          		 	 = 9.0	;10.0
+current_level_going_speed		 = 5;6
+search_speed         		 	 = .9
+Spawn_Inventory_Item_Section 		 = mutant_krovosos_jaw
+Spawn_Inventory_Item_Probability 	 = 0.2
+
+[bloodsucker_bio_1_immunities]
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.0
+wound_immunity			= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity		= 0.0
+explosion_immunity		= 1.0
+fire_wound_immunity		= 0.0
+
+[bloodsucker_bio_1_attack_params]
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;Left hand Strike
+stand_attack_0 =	  	0.30,		0.6,		    300,        5.5, 6.0, 0.9,		 -1.0, 1.0, -1.0, 1.0,				  2.5
+;Both hands Strike
+stand_attack_1 =	  	0.30,		0.8,		    600,        1.0, 3.0, 5.0,		 -0.8, 0.8, -1.2, 1.2,				  2.5
+;Right hand Strike
+stand_attack_2 =	  	0.30,		0.12,		    650,        -5.0, 3.5, 1.50,	 -1.0, 1.0, -1.0, 1.0,				  2.5
+;Right hand Strike
+vampire_2		=	  	0.60,		0.7,	    750,        1.0, 5.5, 6.50,		  -1.2, 1.2, -1.2, 1.2,				  4.5
+;Right hand Strike
+stand_attack_run_0 =	bloodsucker_bio_1_run_attack_sect
+
+[bloodsucker_bio_1_run_attack_sect]
+value1			= 0.20,		0.4,		    350,        0.0, 0.5, 4.50,		  -1.2, 1.2, -1.2, 1.2,				  2.2
+value2			= 0.60,		0.8,		    400,        0.0, 0.5, 4.50,		  -1.2, 1.2, -1.2, 1.2,				  2.2
+
+
+[bloodsucker_bio_2]:bloodsucker_bio_1
+visual				= monsters\krovosos\krovosos_2
+Predator_Visual			= monsters\krovosos\krovosos_color_sin
+
+[bloodsucker_bio_3]:bloodsucker_normal
+
+[bloodsucker_bio_4]:bloodsucker_strong
+
+[snork_bio_1]:snork_strong
+visual				= monsters\snork\snork
+
+[snork_bio_2]:snork_bio_1
+visual				= monsters\snork\snork_1
+
+[tushkano_bio_1]:m_tushkano_normal
+visual				 = monsters\tushkano\tushkano
+
+immunities_sect				 = tushkano_bio_1_immunities
+
+[tushkano_bio_1_immunities]
+burn_immunity			= 1.0
+strike_immunity			= 1.0
+shock_immunity			= 1.0
+wound_immunity			= 1.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 1.0
+chemical_burn_immunity		= 1.0
+explosion_immunity		= 1.0
+fire_wound_immunity		= 1.0
+
+[tushkano_bio_2]:tushkano_bio_1
+visual				 = monsters\tushkano\tushkano_1
+
+[crow_bio_1]:m_crow
+
+[controller_bio_1]:controller_tubeman
+visual				 = monsters\kontroler\kontroler_2
+
+[controller_bio_2]:controller_bio_1
+visual				 = monsters\kontroler\kontroler_3
+
+
+[gigant_bio_1]:m_gigant_normal
+
+[dog_bio_1]:dog_weak
+
+[dog_bio_2]:dog_normal
+
+[dog_bio_3]:dog_strong
+
+[pseudodog_bio_1]:pseudodog_weak
+
+[pseudodog_bio_2]:pseudodog_normal
+
+[pseudodog_bio_3]:pseudodog_strong
+
+[pseudodog_bio_4]:psy_dog_radar
+
+[boar_bio_1]:boar_weak
+
+[boar_bio_2]:boar_normal
+
+[boar_bio_3]:boar_strong
+
+[flesh_bio_1]:flesh_weak
+
+[flesh_bio_2]:flesh_normal
+
+[flesh_bio_3]:flesh_strong
+
+
+;------------------------------------------------------------
+;- власть над монстрами
+;------------------------------------------------------------
+[zombie_freund]:zombie_bio_1
+visual				= monsters\zombi\zombi_16
+species				= m_drug
+immunities_sect			= zombie_immunities_freund
+
+[zombie_immunities_freund]
+burn_immunity			= 0.3
+strike_immunity			= 0.3
+shock_immunity			= 0.3
+wound_immunity			= 0.3
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.3
+chemical_burn_immunity		= 0.3
+explosion_immunity		= 0.3
+fire_wound_immunity		= 0.3
+
+[burer_freund]:burer_indoor
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\burer\burer_g
+
+[chimera_freund]:chimera_strong
+visual				= monsters\el_chimera\el_chimera_2
+species				= m_drug
+immunities_sect			= zombie_immunities_freund
+
+[boar_freund]:boar_strong
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\mutant_boar\mutant_boar_g
+
+[cat_freund]:m_cat_e
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\cat\cat_g
+
+[dog_freund]:dog_strong
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\dog\dog_g
+
+[flesh_freund]:flesh_strong
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\flesh\flesh_g
+
+[fracture_freund]:m_fracture_e
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\izlom\izlom_g
+
+[gigant_freund]:gigant_strong
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\psevdogigant\psevdogigant_g
+
+[poltergeist_freund]:m_poltergeist_normal_tele
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\poltergeist\poltergeist_g
+
+[poltergeist_2_freund]:m_poltergeist_normal_flame
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\poltergeist\poltergeist_g
+
+[pseudodog_freund]:pseudodog_strong
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\pseudodog\pseudodog_g
+
+[tushkano_freund]:tushkano_normal
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\tushkano\tushkano_g
+
+[snork_freund]:snork_strong
+immunities_sect			= zombie_immunities_freund
+species				= m_drug
+visual				= monsters\snork\snork_g
+
+[bloodsucker_freund]:bloodsucker_strong
+immunities_sect			= zombie_immunities_freund
+Predator_Visual			= monsters\krovosos\krovosos_1_strong_xray
+species				= m_drug
+visual				= monsters\krovosos\krovosos_g

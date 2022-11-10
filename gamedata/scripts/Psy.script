@@ -1,0 +1,231 @@
+function Run_Psy()
+ if db.FlagRunPsy == 0 then
+  level_psy_antenna.g_PsyAntenna2:construct()
+  level_psy_antenna.g_PsyAntenna2:switch_to_phase(0)
+  level_psy_antenna.g_PsyAntenna2:switch_to_phase(1)
+  level_psy_antenna.g_PsyAntenna2:switch_to_phase(2)
+  db.FlagRunPsy = 1
+  end
+end
+
+function Return_Q(pos_psy_x,pos_psy_y,size_psy_x,size_psy_y)
+ local pos = db.actor:position()
+
+ local x1 = pos_psy_x-size_psy_x
+ local x2 = pos_psy_x+size_psy_x
+ local y1 = pos_psy_y-size_psy_y
+ local y2 = pos_psy_y+size_psy_y
+
+ if (pos.x >= x1 and pos.x <= x2) and (pos.z >= y1 and pos.z <= y2) then
+  return 1
+ end
+
+ return 0
+end
+
+function Work_Psy()
+ local level_name = level.name()
+ local pos = db.actor:position()  
+
+	if (db.Flag5 == 1) or (db.Flag4 == 1) then
+	level_psy_antenna2.g_PsyAntenna3:update(db.dt);
+	end
+
+
+ if level_name == "l01_escape" then
+  Psy_Escape()
+ end
+
+ if level_name == "l02_garbage" then
+  Psy_Garbage()
+ end
+
+ if level_name == "l04_darkvalley" then
+  Psy_Val()
+ end
+
+ if level_name == "l06_rostok" then
+  Psy_Rostok()
+ end
+
+ if level_name == "l07_military" then
+ end
+
+ if level_name == "l08_yantar" then
+  Psy_Yantar()
+ end
+
+ if level_name == "l11_pripyat" then
+ end
+
+end
+
+function Psy_Escape()
+if Return_Q(355,-33,30,30) == 1 then
+  db.FlagRunPsy = 1	
+  Run_Psy()
+  level_psy_antenna.g_PsyAntenna2:start2()
+  db.prev_time = time_global();	
+  db.dt	= time_global()-db.prev_time+15;
+  db.prev_time = time_global();
+  level_psy_antenna.g_PsyAntenna2:update(db.dt);
+ else
+ level_psy_antenna.g_PsyAntenna2:final2()
+ end 
+end
+
+
+function Psy_Garbage()
+if (Return_Q(183,-153,60,60) == 1) or (Return_Q(54,116,20,20) == 1) then
+  Run_Psy()
+  level_psy_antenna.g_PsyAntenna2:start2()
+  db.prev_time = time_global();	
+  db.dt	= time_global()-db.prev_time+15;
+  db.prev_time = time_global();
+  level_psy_antenna.g_PsyAntenna2:update(db.dt);
+ else
+  level_psy_antenna.g_PsyAntenna2:final2()
+ end
+end
+
+function Psy_Val()
+if (Return_Q(-85,-156,20,20) == 1) or (Return_Q(88,-53,50,50) == 1) then
+  Run_Psy()
+  level_psy_antenna.g_PsyAntenna2:start2()
+  db.prev_time = time_global();	
+  db.dt	= time_global()-db.prev_time+15;
+  db.prev_time = time_global();
+  level_psy_antenna.g_PsyAntenna2:update(db.dt);
+ else
+  level_psy_antenna.g_PsyAntenna2:final2()
+ end
+end
+
+
+function Psy_Rostok()
+if (Return_Q(-210,151,20,20) == 1) or (Return_Q(-59,-150,25,25) == 1) then
+  Run_Psy()
+  level_psy_antenna.g_PsyAntenna2:start2()
+  db.prev_time = time_global();	
+  db.dt	= time_global()-db.prev_time+15;
+  db.prev_time = time_global();
+  level_psy_antenna.g_PsyAntenna2:update(db.dt);
+ else
+  level_psy_antenna.g_PsyAntenna2:final2()
+ end
+end
+
+function Psy_Yantar()
+if (Return_Q(122,-196,25,25) == 1) then
+  Run_Psy()
+  level_psy_antenna.g_PsyAntenna2:start2()
+  db.prev_time = time_global();	
+  db.dt	= time_global()-db.prev_time+15;
+  db.prev_time = time_global();
+  level_psy_antenna.g_PsyAntenna2:update(db.dt);
+ else
+  level_psy_antenna.g_PsyAntenna2:final2()
+ end
+end
+
+function Run_Vibros()
+local snd_obj = xr_sound.get_safe_sound_object([[ambient\earthquake]])
+snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
+set_postprocess ("scripts\\earthshake.ltx")
+level.set_weather_fx ("surge_day")
+level.add_pp_effector ("vibros.ppe", 1974, false)
+end
+
+function Psy_and_Vibros()
+local level_name = level.name()
+
+Run_Psy()
+Work_Psy()
+
+if (level_name ~= "l05_bar") and (level_name ~= "l03u_agr_underground") and  (level_name ~= "l08u_brainlab") and (level_name ~= "l10u_bunker") and (level_name ~= "l04u_labx18") and (level_name ~= "l12u_sarcofag") and (level_name ~= "l12u_control_monolith") then
+
+
+local l_time = level.get_time_hours()
+
+       if db.Flag2 == 0 then
+	if l_time == db.time then
+	 db.Flag_R1 = 1
+        end  
+        
+        if db.Flag_R1 == 1 then
+	 db.Time_Vibros = db.Time_Vibros + 1
+	 xr_sound.set_actor_sound("level_border_detector")
+	 xr_sound.set_actor_sound_factor(0.0001)
+ 	end
+        
+ 	if db.Time_Vibros > 200 then
+	 db.Flag_R1 = 0
+	  xr_sound.set_actor_sound("")
+	 Run_Vibros()
+	 db.Flag2 = 1
+         db.Flag2 = 0
+         db.Flag3 = 1
+
+	 db.Time_Vibros = 0
+	 local old_time = db.time
+	 db.time = math.random(1,24)
+	 if db.time == old_time then
+	  db.time = math.random(1,24)		 
+	 end
+ 	 db.dt1	= time_global();
+
+        end	
+       end
+
+       if db.Flag3 == 1 then
+  db.prev_time1 = time_global();	
+  db.Time_Vibros2	= db.prev_time1-db.dt1;
+
+	 if db.Time_Vibros2 > 25000 then
+          db.Flag3 = 0
+          db.Flag4 = 1
+	  db.Time_Vibros2 = 0
+          db.Time_Vibros3 = 0
+	 xr_sound.set_actor_sound("level_border_detector")
+ 	 xr_sound.set_actor_sound_factor(0.1)
+	 level.add_pp_effector("dead_zone.ppe", 1001, true)
+ 	 level.set_pp_effector_factor(1001, db.xray)
+
+         end
+       end
+
+
+       if db.Flag4 == 1 then
+	 db.Time_Vibros4 = db.Time_Vibros4 + 1
+	 db.xray = db.xray + 0.0001
+	 level.add_pp_effector("dead_zone.ppe", 1001, true)
+ 	 level.set_pp_effector_factor(1001, db.xray)
+	 xr_sound.set_actor_sound("level_border_detector")
+ 	 xr_sound.set_actor_sound_factor(0.1)
+	 if db.xray >= 0.07 then
+          db.Flag4 = 0
+          db.Flag5 = 1
+	  db.Time_Vibros4 = 0
+	 end
+       end
+
+       if db.Flag5 == 1 then
+	 db.xray = db.xray - 0.00008
+
+	 level.add_pp_effector("dead_zone.ppe", 1001, true)
+ 	 level.set_pp_effector_factor(1001, db.xray)
+	 xr_sound.set_actor_sound("level_border_detector")
+ 	 xr_sound.set_actor_sound_factor(0.1)
+	 if db.xray <= 0 then
+          db.Flag4 = 0
+          db.Flag2 = 0
+          db.Flag5 = 0
+	  level.remove_pp_effector(1001)
+	  xr_sound.set_actor_sound("")
+	  db.xray = 0	
+	 end
+	end 	
+end
+
+end

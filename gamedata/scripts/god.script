@@ -1,0 +1,96 @@
+-- GOD of the zone MOD v3.0 --
+-- Автор: Shoker
+
+local god = false
+
+-- Записываем переменную
+function save(variable_name, value)
+	xr_logic.pstor_store(db.actor, variable_name, value)
+end
+
+-- Загружаем переменную
+function load(variable_name, value_if_not_found)
+	return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+-- Удаляем переменную
+function del(variable_name)
+	if db.storage[db.actor:id()].pstor[variable_name] then
+		db.storage[db.actor:id()].pstor[variable_name] = nil
+	end
+end
+
+-- Обработчик нажатий на клавиши в Главном меню 
+function key_binder(dik, keyboard_action, self)
+if db.actor then
+--------------------------HUD DISABLE MOD----------------------------
+		if dik == DIK_keys.DIK_H then
+            level.hide_indicators_safe()
+            end
+
+		if dik == DIK_keys.DIK_J then
+   		level.show_indicators()
+            end
+---------------------------------------------------------------------
+
+		if dik == DIK_keys.DIK_N then
+              con("Здоров_как_кровосос")
+              db.actor.health=0.99
+              db.actor.power=0.99
+              db.actor.psy_health=0.99
+              db.actor.radiation=0.0
+
+            end   
+		if dik == DIK_keys.DIK_M then
+            if db.actor then
+		dialogs.relocate_money(db.actor,10000,"in")
+            end
+            end   
+end
+end
+
+function main()
+
+end
+
+function spawn_item_in_inv(spawn_item,npc)
+  if npc==nil then 
+    npc=db.actor 
+  end
+  return alife():create(spawn_item, 
+      npc:position(),
+      npc:level_vertex_id(),  
+      npc:game_vertex_id(),
+      npc:id())
+end
+
+function spawn(spawn_item)
+   local npc=db.actor 
+
+  return alife():create(spawn_item, 
+      npc:position(),
+      npc:level_vertex_id(),  
+      npc:game_vertex_id())
+end
+
+--используем для спавна патронов
+function spawn_ammo_in_inv(spawn_item,number,npc)
+  if npc==nil then 
+    npc=db.actor 
+  end
+  if number > 0 then
+    return se_respawn.create_ammo(spawn_item, 
+        npc:position(),
+        npc:level_vertex_id(),  
+        npc:game_vertex_id(),
+        npc:id(),
+        number)
+  end
+end
+
+-- Вывод инфы в консоль
+function con(msg)
+get_console():execute(msg)
+end   
+
+

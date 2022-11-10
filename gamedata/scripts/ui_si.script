@@ -1,0 +1,834 @@
+spawn_type = nil
+
+local stalker_table = {
+	"novice_stalker_1",
+	"novice_stalker_2",
+	"novice_stalker_4",
+	"novice_stalker_5",
+	"novice_stalker_6",
+	"novice_stalker_8",
+	"novice_stalker_9",
+	"novice_stalker_11",	
+	"experienced_stalker_1",
+	"experienced_stalker_2",
+	"veteran_stalker_1",
+	"veteran_stalker_2",
+	"veteran_stalker_3",
+	"master_stalker_1",
+	"novice_bandit_1",
+	"novice_bandit_2",
+	"novice_bandit_3",
+	"novice_bandit_4",
+	"experienced_bandit_1",
+	"experienced_bandit_2",
+	"experienced_bandit_3",
+	"veteran_bandit_1",
+	"veteran_bandit_2",
+	"master_bandit_1",
+	"master_bandit_2",
+	"agr_soldier_regular", 
+	"agr_soldier_veteran", 
+	"esc_soldier_respawn_1", 
+	"esc_soldier_respawn_specnaz", 
+	"rad_specnaz_respawn_specnaz",
+	"rad_soldier_master", 
+	"mil_killer_respawn_1",
+	"mil_killer_respawn_2", 
+	"mil_killer_respawn_3", 
+	"mil_killer_respawn_4", 
+	"cit_killer_respawn_1", 
+	"cit_killer_respawn_2", 
+	"cit_killer_respawn_3",
+	"ros_killer_respawn_1", 
+	"ros_killer_respawn_2", 
+	"ros_killer_respawn_3", 
+	"ros_killer_respawn_4", 
+	"mil_freedom_respawn_1", 
+	"mil_freedom_respawn_2",
+	"mil_freedom_respawn_3", 
+	"mil_freedom_respawn_sniper", 
+	"mil_freedom_barier_respawn_1", 
+	"pri_respawn_freedom", 
+	"rad_freedom_respawn_2", 
+	"rad_freedom_respawn_1",
+	"rad_freedom_respawn_3", 
+	"sim_freedom_master_quest", 
+	"mil_neutral_barier_respawn_1", 
+	"mil_monolit_rush_respawn_1", 
+	"pri_monolith_respawn_1", 
+	"pri_monolith_respawn_2",
+	"pri_monolith_respawn_3", 
+	"rad_monolith_respawn_1", 
+	"rad_monolith_respawn_2", 
+	"rad_monolith_respawn_3", 
+	"sar_monolith_respawn", 
+	"pri_respawn_dolg", 
+	"gar_dolg_respawn_1",
+	"gar_dolg_respawn_2", 
+	"bar_dolg_respawn_1", 
+	"bar_dolg_respawn_2", 
+	"bar_dolg_respawn_3", 
+	"rad_zombied_respawn_1",
+	"rad_zombied_respawn_2", 
+	"rad_zombied_respawn_3", 
+	"yan_zombied_respawn_1",
+	"yan_zombied_respawn_2", 
+	"yan_zombied_respawn_3", 
+	"yan_ecolog_respawn_1", 
+	"bar_arena_respawner"
+}
+
+local monster_freund_table = {
+	"zombie_freund",
+	"burer_freund",
+	"boar_freund",
+	"cat_freund",
+	"dog_freund",
+	"flesh_freund",
+	"fracture_freund",
+	"gigant_freund",
+	"poltergeist_freund",
+	"poltergeist_2_freund",
+	"pseudodog_freund",
+	"tushkano_freund",
+	"snork_freund",
+	"bloodsucker_freund",
+}
+
+local mob_table = {
+	"cat_bio_1",
+	"cat_bio_2",
+	"cat_bio_3",
+	"burer_bio_1",
+	"burer_bio_2",
+	"burer_bio_3",
+	"izlom_bio_1",
+	"izlom_bio_2",
+	"izlom_bio_3",
+	"bloodsucker_bio_1",
+	"bloodsucker_bio_2",
+	"bloodsucker_bio_3",
+	"bloodsucker_bio_4",
+	"snork_bio_1",
+	"snork_bio_2",
+	"tushkano_bio_1",
+	"tushkano_bio_2",
+	"crow_bio_1",
+	"controller_bio_1",
+	"gigant_bio_1",
+	"dog_bio_1",
+	"dog_bio_2",
+	"dog_bio_3",
+	"pseudodog_bio_1",
+	"pseudodog_bio_2",
+	"pseudodog_bio_3",
+	"pseudodog_bio_4",
+	"boar_bio_1",
+	"boar_bio_2",
+	"boar_bio_3",
+	"flesh_bio_1",
+	"flesh_bio_2",
+	"flesh_bio_3",
+	"poltergeist_tele_bio_1",
+	"poltergeist_flame_bio_2",
+	"zombie_bio_1", 
+	"zombie_bio_2", 
+	"zombie_bio_3", 
+	"zombie_bio_4",
+      	"zombie_bio_5",
+	"zombie_bio_6",
+	"zombie_bio_7",
+	"zombie_bio_8",
+	"zombie_bio_9",
+	"zombie_bio_10",
+	"zombie_bio_11",
+	"zombie_bio_12",
+	"zombie_bio_13",
+	"zombie_bio_14",
+	"zombie_bio_15",
+	"zombie_bio_16",
+	"zombie_bio_17",
+	"zombie_bio_18"
+}
+
+local unique_items_table = {
+		"outfit_novice_m1",
+		"outfit_bandit_m1",
+		"outfit_dolg_m1",
+		"outfit_killer_m1",
+		"outfit_specnaz_m1",
+		"outfit_stalker_m1",
+		"outfit_stalker_m2",
+		"outfit_svoboda_m1",
+		"outfit_exo_m1",
+		"wpn_ak74_m1",
+		"wpn_abakan_m1",
+		"wpn_fort_m1",
+		"wpn_ak74u_m1",
+		"wpn_mp5_m1",
+		"wpn_groza_m1",
+		"wpn_spas12_m1",
+		"wpn_winchester_m1",
+		"wpn_l85_m1",
+		"wpn_lr300_m1",
+		"wpn_svd_m1",
+		"wpn_sig_m1",
+		"wpn_eagle_m1",
+		"wpn_colt_m1",
+		"wpn_val_m1",
+		"wpn_mp5_m2",
+		"wpn_abakan_m2",
+		"wpn_l85_m2",
+		"wpn_sig_m2",
+		"wpn_rg6_m1",
+		"wpn_walther_m1"
+}
+
+local effectors_table = {
+	"zone_flame",
+	"zone_monolith",
+	"zone_death",
+	"zone_campfire_mp_nolight",
+	"zone_campfire_grill",
+	"zone_emi",
+	"zone_flame_small",
+	"zone_teleport",	
+	"zone_buzz_strong",
+	"zone_witches_galantine_weak",
+	"explosive_fuelcan",
+	"explosive_tank",
+	"explosive_barrel_low",
+	"explosive_barrel",
+	"explosive_mobiltank",
+	"explosive_dinamit",
+	"explosive_dinamit"	
+}
+
+local box_table = {
+	"bush_2_01",
+	"bush_1_01",
+	"bush_1_02",
+	"bush_2_02",
+	"bush_2_03",
+	"bush_3_01",
+	"bush_3_02",
+	"bush_3_03",
+	"trees_1_02",
+	"trees_1_03",
+	"trees_1_04",
+	"trees_2_01",
+	"trees_2_02",
+	"trees_2_03",
+	"trees_2_04",
+	"trees_3_01",
+	"trees_3_02",
+	"trees_3_03",
+	"trees_3_04",
+	"trees_branch_1_01",
+	"trees_branch_1_02",
+	"trees_branch_1_04",
+	"trees_elka_2_02_final",
+	"trees_1_01_2_bone_sphere",
+	"trees_elka_1_01",
+	"trees_elka_2_02",
+	"trees_sosna_1_01_alja",
+	"trees_sosna_1_01_kozep",
+	"trees_sosna_1_01_teteje",
+	"trees_sosna_1_02_alja",
+	"trees_sosna_1_02_asokozep",
+	"trees_sosna_1_02_felso",
+	"trees_sosna_1_02_felsokozep",
+	"torony_alja",
+	"torony_final",
+	"torony_final_proba2",
+	"torony_final_proba",
+	"torony_kozepe",
+	"torony_sima_1szint",
+	"torony_sima_1szint_fem",
+	"torony_teteje_final",
+	"torony_teteje_final_fa",
+	"torony_teteje_final_fem",
+	"torony_teteje_final_proba",
+	"tower_4_blockpost",
+	"prop_army_base_01",
+	"prop_army_base_02",
+	"mi24",
+	"train_vagon_02",
+	"train_vagon_dizel",
+	"train_vagon_elektro",
+	"trash_benzovoz_gaz_lod",
+	"trash_buldozer",
+	"trash_kamaz_korpus",
+	"trash_lada_lod",
+	"veh_avtobus_laz",
+	"veh_zil_130",
+	"vetro_talp",
+	"villanykaro_final",
+	"villanykaro_veg_final",
+	"barikada",
+	"beton_block_01",
+	"beton_block_09",
+	"blockpost_01",
+	"blockpost_2",
+	"bochka_3_object",
+	"cisterna_all_pod",
+	"garbage_23",
+	"m_vagon_a",
+	"prop_3bloks",
+	"train_vagon_01_open",
+	"train_vagon_02_open",
+	"train_vagon_platforma",
+	"train_vagon_zerno",
+	"vetrogenerator",
+	"villanykaro",
+	"villanykaro_veg",
+	"garbage_01",
+	"garbage_02",
+	"garbage_18",
+	"musor_metal_5",
+	"musor_metal_9",
+	"ekskavator",
+	"letra",
+	"musor_metal_2",
+	"musor_metal_2_nagy",
+	"musor_plita_podstavka",
+	"nagy_vas",
+	"prop_workers",
+	"trash_kamaz_fura_pricep",
+	"trash_kamaz_korpus3",
+	"trash_uaz_2_lod",
+	"veh_vaz_2103",
+	"fahaz2",
+	"fahaz2_dark",
+	"fahaz2_kerites",
+	"fahaz",
+	"village_house_1",
+	"village_house_2",
+	"fireplace_2",
+	"veh_btr_u_01",
+	"veh_kamaz_u_01",
+	"veh_uaz_u_01"
+}
+
+local vehicles_table = {
+      	"vehicle_niva", 
+	"vehicle_niva2", 
+	"vehicle_moskvich2", 
+	"vehicle_uaz", 
+	"vehicle_uaz2", 
+	"vehicle_kamaz", 
+      	"vehicle_zaz", 
+	"vehicle_tr13", 
+	"vehicle_btr"
+}
+
+local anom_table = {
+	"zone_radioactive_no_weak",
+	"zone_radioactive_no_strong",
+	"zone_buzz_no_weak",
+	"zone_buzz_no_strong",
+	"zone_gravi_no_zone_weak",
+	"zone_gravi_no_zone_strong",
+	"zone_mincer_no_weak",
+	"zone_mincer_no_strong",
+	"zone_mosquito_no_bald_weak",
+	"zone_mosquito_no_bald_strong",
+	"zone_witches_no_galantine_weak",
+	"zone_witches_no_galantine_strong",
+	"zone_zharka_no_static_weak",
+	"zone_zharka_no_static_strong",
+	"zone_mine_no_field"
+}
+
+local item_table = {
+	"detector_health",
+	"bread_a", 
+	"bread", 
+	"kolbasa", 
+	"kolbasa_a", 
+	"conserva", 
+	"vodka_a", 
+	"vodka", 
+	"guitar_a", 
+	"harmonica_a", 
+	"antirad", 
+	"medkit", 
+	"medkit_army", 
+	"medkit_scientic", 
+	"energy_drink", 
+	"bandage", 
+	"binocular_a", 
+	"device_pda", 
+	"device_torch", 
+	"detector_simplx", 
+	"detector_advancex", 
+	"detector_elitx",  
+	"mutant_flesh_eye", 
+	"mutant_boar_leg", 
+	"mutant_dog_tail", 
+	"mutant_psevdodog_tail", 
+	"mutant_krovosos_jaw", 
+	"mutant_burer_hand", 
+	"mutant_zombie_hand", 
+        "mutant_snork_leg", 
+	"af_blood_tutorial", 
+	"quest_case_01", 
+	"dynamite",
+	"esc_wounded_flash", 
+	"gunslinger_flash", 
+        "quest_case_02", 
+	"val_key_to_underground", 
+	"bar_tiran_pda", 
+	"bar_lucky_pda", 
+	"bar_ecolog_flash", 
+	"lab_x16_documents", 
+	"good_psy_helmet", 
+	"bad_psy_helmet", 
+	"kruglov_flash", 
+	"crazy_flash", 
+	"mil_svoboda_leader_pda", 
+	"dar_pass_flash", 
+	"dar_pass_document", 
+	"dar_document1", 
+	"dar_document2", 
+	"dar_document3", 
+	"dar_document4", 
+	"dar_document5", 
+	"pri_decoder_documents", 
+	"cit_doctors_key", 
+	"decoder",
+	"flash_stalker",
+	"flash_bandit",
+	"flash_clear_sky",
+	"flash_dark_stalker",
+	"flash_military",
+	"flash_dolg",
+	"flash_freedom",
+	"flash_killer",
+	"flash_ecolog",
+	"flash_monolith",
+	"flash_zombied",
+	"flash_trader",
+	"flash_actor"
+}
+local ammo_table = {
+	"ammo_9x18_fmj",
+	"ammo_9x18_pmm",
+	"ammo_9x19_pbp",
+	"ammo_9x19_fmj",
+	"ammo_11.43x23_hydro",
+	"ammo_11.43x23_fmj",
+	"ammo_12x70_buck",
+	"ammo_12x76_dart",
+	"ammo_12x76_zhekan",
+	"ammo_5.45x39_ap",
+	"ammo_5.45x39_fmj",
+	"ammo_9x39_sp5",
+	"ammo_9x39_ap",
+	"ammo_9x39_pab9",
+	"ammo_5.56x45_ss190",
+	"ammo_5.56x45_ap",
+	"ammo_7.62x54_7h14",
+	"ammo_7.62x54_7h1",
+	"ammo_7.62x54_ap",
+	"ammo_og-7b",
+	"ammo_vog-25p",
+	"ammo_vog-25",
+	"grenade_f1",
+	"grenade_rgd5",
+	"grenade_gd-05",
+	"ammo_m209",
+	"ammo_gauss",
+	"wpn_addon_scope",
+	"wpn_addon_scope_susat",
+	"wpn_addon_silencer",
+	"wpn_addon_grenade_launcher",
+	"wpn_addon_grenade_launcher_m203",
+	"grenade_f1",
+	"grenade_gd-05",
+	"grenade_rgd5"
+}
+local wpn_table = {
+	"wpn_knife",
+	"bolt",
+	"wpn_pm",
+	"wpn_pb",
+	"wpn_fort",
+	"wpn_fort_m1",
+	"wpn_hpsa",
+	"wpn_beretta",
+	"wpn_walther",
+	"wpn_walther_m1",
+	"wpn_sig220",
+	"wpn_colt1911",
+	"wpn_colt_m1",
+	"wpn_usp",
+	"wpn_desert_eagle",
+	"wpn_eagle_m1",
+	"wpn_bm16",
+	"wpn_toz34",
+	"hunters_toz",
+	"wpn_wincheaster1300",
+	"wpn_winchester_m1",
+	"wpn_spas12",
+	"wpn_spas12_m1",
+	"wpn_ak74u",
+	"wpn_ak74u_m1",
+	"wpn_mp5",
+	"wpn_mp5_m1",
+	"wpn_mp5_m2",
+	"wpn_ak74",
+	"wpn_ak74_m1",
+	"wpn_abakan",
+	"wpn_abakan_m1",
+	"wpn_abakan_m2",
+	"wpn_l85",
+	"wpn_l85_m1",
+	"wpn_l85_m2",
+	"wpn_lr300",
+	"wpn_lr300_m1",
+	"wpn_sig550",
+	"wpn_sig_m1",
+	"wpn_sig_m2",
+	"wpn_groza",
+	"wpn_groza_m1",
+	"wpn_val",
+	"wpn_val_m1",
+	"wpn_vintorez",
+	"wpn_svu",
+	"wpn_svd",
+	"wpn_svd_m1",
+	"wpn_rg-6",
+	"wpn_rg6_m1",
+	"wpn_rpg7",
+	"wpn_g36",
+	"wpn_fn2000",
+	"wpn_gauss"
+}
+local art_table = {
+	"af_medusa",
+	"af_cristall_flower",
+	"af_night_star",
+	"af_vyvert",
+	"af_gravi",
+	"af_gold_fish",
+	"af_blood",
+	"af_mincer_meat",
+	"af_soul",
+	"af_electra_sparkler",
+	"af_electra_flash",
+	"af_electra_moonlight",
+	"af_rusty_thorn",
+	"af_rusty_kristall",
+	"af_rusty_sea-urchin",
+	"af_ameba_slime",
+	"af_ameba_slug",
+	"af_ameba_mica",
+	"af_drops",
+	"af_fireball",
+	"af_cristall",
+	"af_dummy_glassbeads",
+	"af_dummy_pellicle",
+	"af_dummy_battery",
+	"af_dummy_dummy",
+	"af_dummy_spring",
+	"af_fuzz_kolobok"
+}
+local outf_table = {
+				"novice_outfit",
+				"outfit_novice_m1",
+				"bandit_outfit",
+				"outfit_bandit_m1",
+				"killer_outfit",
+				"outfit_killer_m1",
+				"monolit_outfit",
+				"specops_outfit",
+				"outfit_specnaz_m1",
+				"military_outfit",
+				"stalker_outfit",
+				"outfit_stalker_m1",
+				"outfit_stalker_m2",
+				"scientific_outfit",
+				"exo_outfit",
+				"outfit_exo_m1",
+				"svoboda_light_outfit",
+				"svoboda_heavy_outfit",
+				"outfit_svoboda_m1",
+				"dolg_outfit",
+				"outfit_dolg_m1",
+				"dolg_scientific_outfit",
+				"ecolog_outfit",
+				"protection_outfit"	
+}
+
+class "spawn_item" (CUIListItemEx)
+
+function spawn_item:__init() super()
+	self.text					= CUIStatic()
+	self:AttachChild			(self.text)
+	self.text:SetFont			(GetFontLetterica18Russian())
+	self.text:SetTextColor		(255,216,186,140)
+end
+
+class "spawn_item_dialog" (CUIScriptWnd)
+
+function spawn_item_dialog:__init() super()
+
+   self:InitControls()
+   self:InitCallBacks()
+end
+
+function spawn_item_dialog:__finalize()
+end
+
+function spawn_item_dialog:InitControls()
+	self:Enable(true)
+	self:SetWndRect(Frect():set(0,0,1024,768))
+	local xml = CScriptXmlInit()
+	xml:ParseFile	("ui_si_dlg.xml")
+	xml:InitStatic	("background", self)	-- рамка
+	self.list = xml:InitList("list",self)	-- список
+	self.list:ShowSelectedItem(true)
+	self:Register(self.list, "list_window")
+	self:Register(xml:Init3tButton("btn_ammo", self),"btn_ammo")	-- верхние кнопки
+	self:Register(xml:Init3tButton("btn_wpn", self),"btn_wpn")
+	self:Register(xml:Init3tButton("btn_art", self),"btn_art")
+	self:Register(xml:Init3tButton("btn_item", self),"btn_item")
+	self:Register(xml:Init3tButton("btn_outf", self),"btn_outf")
+	self:Register(xml:Init3tButton("btn_create", self),"btn_create")	-- нижние кнопки
+	self:Register(xml:Init3tButton("btn_close", self),"btn_close")
+
+      self:Register(xml:Init3tButton("btn_stalker", self),"btn_stalker")    -- новые кнопки 
+      self:Register(xml:Init3tButton("btn_anom", self),"btn_anom")     
+      self:Register(xml:Init3tButton("btn_mob", self),"btn_mob")     
+      self:Register(xml:Init3tButton("btn_monster_freund", self),"btn_monster_freund")
+      self:Register(xml:Init3tButton("btn_unique_items", self),"btn_unique_items")
+      self:Register(xml:Init3tButton("btn_vehicles", self),"btn_vehicles")
+      self:Register(xml:Init3tButton("btn_effectors", self),"btn_effectors")
+      self:Register(xml:Init3tButton("btn_box", self),"btn_box")
+
+end
+
+function spawn_item_dialog:InitCallBacks()
+	self:AddCallback("btn_ammo",	ui_events.BUTTON_CLICKED,	self.FillList_ammo, self)
+	self:AddCallback("btn_wpn",		ui_events.BUTTON_CLICKED,	self.FillList_wpn, self)
+	self:AddCallback("btn_art",		ui_events.BUTTON_CLICKED,	self.FillList_art, self)
+	self:AddCallback("btn_item",	ui_events.BUTTON_CLICKED,	self.FillList_item, self)
+	self:AddCallback("btn_outf",	ui_events.BUTTON_CLICKED,	self.FillList_outf, self)
+	self:AddCallback("btn_create",	ui_events.BUTTON_CLICKED,	self.OnButton_create_clicked, self)
+	self:AddCallback("btn_close",	ui_events.BUTTON_CLICKED,	self.OnButton_close_clicked, self)
+	self:AddCallback("list_window",	ui_events.WINDOW_LBUTTON_DB_CLICK,	  self.OnButton_create_clicked,	self)
+	self:AddCallback("btn_stalker",	ui_events.BUTTON_CLICKED,	self.FillList_stalker, self)
+	self:AddCallback("btn_mob",	ui_events.BUTTON_CLICKED,	self.FillList_mob, self)
+	self:AddCallback("btn_anom",	ui_events.BUTTON_CLICKED,	self.FillList_anom, self)
+	self:AddCallback("btn_monster_freund",	ui_events.BUTTON_CLICKED,	self.FillList_monster_freund, self)
+	self:AddCallback("btn_unique_items",	ui_events.BUTTON_CLICKED,	self.FillList_unique_items, self)
+	self:AddCallback("btn_vehicles",	ui_events.BUTTON_CLICKED,	self.FillList_vehicles, self)
+	self:AddCallback("btn_effectors",	ui_events.BUTTON_CLICKED,	self.FillList_effectors, self)
+	self:AddCallback("btn_box",		ui_events.BUTTON_CLICKED,	self.FillList_box, self)
+
+end
+
+
+function spawn_item_dialog:FillList_stalker()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	for i = 1, #stalker_table do
+		self:AddItemToList(stalker_table[i])
+	end
+end
+
+
+function spawn_item_dialog:FillList_mob()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	for i = 1, #mob_table do
+		self:AddItemToList(mob_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_box()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	for i = 1, #box_table do
+		self:AddItemToList(box_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_effectors()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	for i = 1, #effectors_table do
+		self:AddItemToList(effectors_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_vehicles()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	for i = 1, #vehicles_table do
+		self:AddItemToList(vehicles_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_monster_freund()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	for i = 1, #monster_freund_table do
+		self:AddItemToList(monster_freund_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_unique_items()
+	self.list:RemoveAll()
+      spawn_type="actor"
+	for i = 1, #unique_items_table do
+		self:AddItemToList(unique_items_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_anom()
+	self.list:RemoveAll()
+      spawn_type="anom"
+	for i = 1, #anom_table do
+		self:AddItemToList(anom_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_ammo()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	for i = 1, #ammo_table do
+		self:AddItemToList(ammo_table[i])
+	end
+end
+function spawn_item_dialog:FillList_wpn()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	for i = 1, #wpn_table do
+		self:AddItemToList(wpn_table[i])
+	end
+end
+function spawn_item_dialog:FillList_art()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	for i = 1, #art_table do
+		self:AddItemToList(art_table[i])
+	end
+end
+function spawn_item_dialog:FillList_item()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	for i = 1, #item_table do
+		self:AddItemToList(item_table[i])
+	end
+end
+function spawn_item_dialog:FillList_outf()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	for i = 1, #outf_table do
+		self:AddItemToList(outf_table[i])
+	end
+end
+function spawn_item_dialog:AddItemToList(item_name)
+	local _itm				= spawn_item()
+	_itm.text:SetText		(item_name)
+	self.list:AddItem		(_itm)
+end
+
+function spawn_item_dialog:OnButton_create_clicked()	
+	if self.list:GetSize()==0 then 
+		return 
+	end
+	local index = self.list:GetSelectedItem()
+	if index == -1 then 
+		return 
+	end
+	local item = self.list:GetItem(index).text:GetText()
+	if alife() and db.actor:alive() then
+
+		local pos = db.actor:position()
+		local dir = db.actor:direction()
+
+           if spawn_type=="actor" then
+		pos = pos:add(dir:mul(3))
+		alife():create(item, pos, 0, 0, db.actor:id())
+           end
+      if spawn_type=="stalker" then
+		pos = pos:add(dir:mul(3))
+ 		alife():create(item, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+      end
+      if spawn_type=="anom" then
+		pos = pos:add(dir:mul(3))
+ 		spawn_anom(item,pos)
+      end
+	end
+end
+
+function spawn_item_dialog:OnButton_close_clicked()
+	self:GetHolder():start_stop_menu	(self,false)
+	self.owner:Show						(true)
+	if level.present() and db.actor and db.actor:alive() then
+		get_console():execute("main_menu off")
+	end
+end
+
+function spawn_item_dialog:OnKeyboard(dik, keyboard_action)
+	local bind = dik_to_bind(dik)
+	if bind == key_bindings.kQUIT then
+		self:OnButton_close_clicked()
+	else
+		if dik==28 then
+			self:OnButton_create_clicked()
+		end
+	end
+	return true
+end
+
+function main()
+end
+
+function spawn_anom(item,pos)
+
+
+local obj = alife():create(item,pos,db.actor:level_vertex_id(),db.actor:game_vertex_id())
+    if string.find(obj:section_name(), "zone_mine_gravitational") or
+       string.find(obj:section_name(), "field") or 
+       string.find(obj:section_name(), "teleport") or
+       string.find(obj:section_name(), "death") or  
+       string.find(obj:section_name(),	"zone_radioactive_no_weak") or
+       string.find(obj:section_name(),	"zone_radioactive_no_strong") or
+       string.find(obj:section_name(),	"zone_buzz_no_weak") or
+       string.find(obj:section_name(),	"zone_buzz_no_strong") or
+       string.find(obj:section_name(),	"zone_gravi_no_zone_weak") or
+       string.find(obj:section_name(),	"zone_gravi_no_zone_strong") or
+       string.find(obj:section_name(),	"zone_mincer_no_weak") or
+       string.find(obj:section_name(),	"zone_mincer_no_strong") or
+       string.find(obj:section_name(),	"zone_mosquito_no_bald_weak") or
+       string.find(obj:section_name(),	"zone_mosquito_no_bald_strong") or
+       string.find(obj:section_name(),	"zone_witches_no_galantine_weak") or
+       string.find(obj:section_name(),	"zone_witches_no_galantine_strong") or
+       string.find(obj:section_name(),	"zone_zharka_no_static_weak") or
+       string.find(obj:section_name(),	"zone_zharka_no_static_strong") or
+       string.find(obj:section_name(),	"zone_mine_no_field") or
+       string.find(obj:section_name(), "sarcofag") or  
+       string.find(obj:section_name(), "zone_mine_field") or
+       string.find(obj:section_name(), "zone_buzz") or
+       string.find(obj:section_name(), "zone_ameba") or
+       string.find(obj:section_name(), "zone_burning_fuzz") or
+       string.find(obj:section_name(), "zone_gravi_zone") or
+       string.find(obj:section_name(), "zone_campfire_mp_nolight") or
+       string.find(obj:section_name(), "zone_monolith") or
+       string.find(obj:section_name(), "zone_mosquito_bald") or
+       string.find(obj:section_name(), "zone_radioactive") or
+       string.find(obj:section_name(), "zone_rusty_hair") or
+       string.find(obj:section_name(), "zone_teleport") or
+       string.find(obj:section_name(), "zone_witches_galantine") or
+       string.find(obj:section_name(), "zone_zharka_static") or
+       string.find(obj:section_name(), "torrid_zone") or
+       string.find(obj:section_name(), "zone_mincer") then
+     anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id(),"field")
+       else
+     anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+end
+end

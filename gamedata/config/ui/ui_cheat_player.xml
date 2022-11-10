@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<cheat>
+	<background x="0" y="0" width="400" height="340" stretch="1">
+		<texture x="0" y="0" width="350" height="460">ui\ui_dg_inventory</texture>
+	</background>
+
+	<caption x="175" y="5" width="50" height="35">
+		<text>MP3-плеер</text>
+	</caption>
+	
+	<btn_1 x="72" y="30" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>рамштайн  Adios</text>
+	</btn_1>
+
+      	<btn_2 x="72" y="60" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>STALKER_vs_Apocalyptica</text>
+	</btn_2>
+
+	<btn_3 x="72" y="90" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>рамштайн America</text>
+	</btn_3>
+
+	<btn_4 x="72" y="120" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>рамштайн Sonne</text>
+	</btn_4>
+
+	<btn_5 x="72" y="150" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>рамштайн Ich Will</text>
+	</btn_5>
+
+	<btn_6 x="72" y="180" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>рамштайн  Feuer Frei!</text>
+	</btn_6>
+
+	<btn_7 x="72" y="210" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+	<text>Benny_Page-Battlefield</text>
+	</btn_7>
+
+	<btn_8 x="72" y="240" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>рамштай нIch Will (Radio Edit)</text>
+	</btn_8>
+
+	<btn_9 x="72" y="270" width="256" height="35">
+	<texture_e>ui\ui_btn_mm_e</texture_e>
+	<texture_t>ui\ui_btn_mm_t</texture_t>
+	<texture_h>ui\ui_btn_mm_h</texture_h>
+		<text>Muter (Sono's Inkubator Mix)</text>
+	</btn_9>
+
+<btn_quit x="270" y="305" width="117" height="29">
+	<texture_e>ui_button_ordinary_e</texture_e>
+	<texture_t>ui_button_ordinary_t</texture_t>
+	<texture_h>ui_button_ordinary_h</texture_h>
+	<text>ВЫХОД</text>
+</btn_quit>
+
+<btn_stop x="15" y="305" width="117" height="29">
+	<texture_e>ui_button_ordinary_e</texture_e>
+	<texture_t>ui_button_ordinary_t</texture_t>
+	<texture_h>ui_button_ordinary_h</texture_h>
+	<text>СТОП</text>
+</btn_stop>
+</cheat>
